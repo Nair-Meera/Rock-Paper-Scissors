@@ -1,3 +1,105 @@
+#Fuction for random selection from given option.
+#So computer can randomly choose one from given options.(Here the options are Rock, Paper, Scissors)
+
+import random
+
+#Store the options in a array named Game
+Game = ["Rock","Paper","Scissors"]
+
+#Variable named Computer take a option randomly from array Game using the function random
+Computer = random.choice(Game)
+
+#Variable Player give his/her choice using user input
+Player = input("Enter Players Choice \nRock Or Paper or Scissors: \t")
+
+#Print the results
+print("\n\nComputer throws a: ",Computer,"\nPlayer throws a  : ",Player)
+
+#So from the given results we get to know who wins and who lose
+#Appling more instruction
+#Lets the computer itself announce who is the winner
+#Introduce some Python Conditions and If statements
+
+#Codes will be repeating for easy understanding
+
+Game = ["Rock","Paper","Scissors"]
+Computer = random.choice(Game)
+Player = input("Enter Players Choice \nRock Or Paper or Scissors: \t")
+print("\n\nComputer throws a: ",Computer,"\nPlayer throws a  : ",Player)
+
+#Two variables, Computer and Player, which are used as part of the if statement to test if both are equal then print Tie
+
+if (Computer == Player):
+    print("\nTie")
+    
+#If the above conditions were not true, then try elif condition
+#If Computer and Player throws different options then check both options and check the appropriate option
+
+#Below, Paper is dominant than Rock, so Player is the winner
+#If it was vice versa, the else condition catches the preceding conditions so Computer will become the winner
+#Write all conditions which can happen
+
+elif (Computer == "Rock"):
+    if (Player == "Paper"):
+        print("\nPlayer Wins")
+    else:
+        print("\nComputer Wins")
+
+elif (Computer == "Paper"):
+    if (Player == "Scissors"):
+        print("\nPlayer Wins")
+    else:
+        print("\nComputer Wins")
+        
+elif (Computer == "Scissors"):
+    if (Player == "Rock"):
+        print("\nPlayer Wins")
+    else:
+        print("\nComputer Wins")
+        
+#Lets make more intresting
+#The above code only let the player to enter the input once
+#Make it multiple times in a single code than reloading the above code many times
+#User could decide when to stop the game
+
+#With the while loop we can execute a set of statements as long as a condition is true
+#To stop use break statement, even if the while condition is true the loop will break 
+
+while (True):
+    
+    Game = ["Rock","Paper","Scissors"]
+    Computer = random.choice(Game)
+    
+    print("\n Type \"Exit\" to quit the game")
+    Player = input("\nEnter Players Choice \nRock Or Paper or Scissors: \t")
+    print("\n\nPlayer throws a  : ",Player,"\nComputer throws a: ",Computer)
+
+    if (Player == "Exit"):
+        break
+        
+    if (Computer == Player):
+        print("\nTie")
+
+    elif (Computer == "Rock"):
+        if (Player == "Paper"):
+            print("\nPlayer Wins")
+        else:
+            print("\nComputer Wins")
+
+    elif (Computer == "Paper"):
+        if (Player == "Scissors"):
+            print("\nPlayer Wins")
+        else:
+            print("\nComputer Wins")
+
+    elif (Computer == "Scissors"):
+        if (Player == "Rock"):
+            print("\nPlayer Wins")
+        else:
+            print("\nComputer Wins")
+            
+#Now we need to find the real winner we should count the score
+
 #Store values in two variables(one for player and other for computer)
 Computer_Score = 0
 Player_Score = 0
@@ -45,4 +147,3 @@ while (True):
         else:
             print("\n\tComputer Wins")
             Computer_Score += 1
-
