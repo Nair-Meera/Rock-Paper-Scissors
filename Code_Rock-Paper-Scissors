@@ -1,0 +1,48 @@
+#Store values in two variables(one for player and other for computer)
+Computer_Score = 0
+Player_Score = 0
+
+while (True):
+    Game = ["Rock","Paper","Scissors"]
+    Computer = random.choice(Game)
+    print("\n Type \"Exit\" to quit the game")
+    Player = input("\nEnter Players Choice \nRock Or Paper or Scissors: \t")
+    
+        #The %s operator lets you add a value into a Python string
+    if (Player == "Exit"):
+        print("\n\nComputer Scored :%s \nPlayer Scored :%s"%(Computer_Score,Player_Score))
+        break
+    print("\n\nComputer throws a: ",Computer,"\nPlayer throws a  : ",Player)
+    
+    
+
+        
+    if (Computer == Player):
+        print("\n\tTie")
+
+#Add +1 from the winner variable with the stored value     
+        
+    elif (Computer == "Rock"):
+        if (Player == "Paper"):
+            print("\n\tPlayer Wins")
+            Player_Score += 1
+        else:
+            print("Computer Wins")
+            Computer_Score += 1
+
+    elif (Computer == "Paper"):
+        if (Player == "Scissors"):
+            print("\n\tPlayer Wins")
+            Player_Score += 1
+        else:
+            print("\n\tComputer Wins")
+            Computer_Score += 1
+
+    elif (Computer == "Scissors"):
+        if (Player == "Rock"):
+            print("\n\tPlayer Wins")
+            Player_Score += 1
+        else:
+            print("\n\tComputer Wins")
+            Computer_Score += 1
+
