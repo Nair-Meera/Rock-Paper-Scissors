@@ -31,4 +31,4 @@ if (player == paper) and (computer == scissors); computer wins
 
 if (player == scissors) and (computer == scissors); tie
 
-#Details of comments are provided on each line of code.
+#Details are provided on each line of code.
