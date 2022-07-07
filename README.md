@@ -10,3 +10,5 @@ Rules of Game:
 
 Simple implementation of Rock Paper Scissors game on Python code shows how to play the game by a user and computer.
 The code is completly made on Jupyter Notebook (Anaconda) platform.
+
+Comments are provided on each line of code.
